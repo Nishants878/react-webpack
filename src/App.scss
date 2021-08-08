@@ -121,17 +121,27 @@
 
 
 h1{
-    color: red;
+    color: #FF4C29;
     text-align: center;
+    font-size: 4rem;
 }
-.inputContainer{
+form{
     width: 100vw;
     display: flex;
     justify-content: center;
+}
+.inputField{
+    width: 250px;
+    height: 2rem;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
 
-    input{
-        border: 2px solid green;
-        color: blue;
-        height: 50px;
-    }
+
+#app{
+    width: 100vw;
+    height: 100vh;
+    background-color: #334756;
 }
