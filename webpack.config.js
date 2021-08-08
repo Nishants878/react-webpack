@@ -1,0 +1,30 @@
+const path = require("path");
+
+module.exports = {
+  //here path creates foldername and we name the js folder name, dev server portion which we want to run it and
+  // watchContentBase for continuos compilation
+  //rules are in array to check if our provided file have js or jsx and convert to js using babel
+  output: {
+    path: path.join(__dirname, "/dist"),
+    filename: "index.bundle.js",
+  },
+  devServer: {
+    port: 3010,
+    watchContentBase: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+    ],
+  },
+};
