@@ -14,6 +14,10 @@ export default function App() {
           onChange={(e) => setTodo(e.target.value)}
         />
       </div>
+      <select>
+        <option value="lime">Lime</option>
+        <option value="soda">Soda</option>
+      </select>
     </div>
   );
 }
