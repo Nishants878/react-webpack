@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TodoCard from "../TodoCard/TodoCard";
 import classes from "./_TodoList.module.scss";
 export default function TodoList({ store, handleDelete, handleCheck }) {
