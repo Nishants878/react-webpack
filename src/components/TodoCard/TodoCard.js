@@ -8,10 +8,6 @@ export default function TodoCard({
   handleDelete,
   handleCheck,
 }) {
-  const checkingCheck = () => {
-    handleCheck(id);
-  };
-
   return (
     <div id={id} key={key} className={classes.main}>
       <input onClick={() => handleCheck(id)} type="checkbox" />

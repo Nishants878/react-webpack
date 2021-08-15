@@ -4,7 +4,7 @@ import TodoList from "../../components/TodoList/TodoList";
 import { Link } from "react-router-dom";
 export default function MainTodo() {
   const [todo, setTodo] = useState("");
-
+  const [isChecked, setChecked] = useState(false);
   const [store, setStore] = useState([]);
 
   const handleInput = (e) => setTodo(e.target.value);
@@ -15,14 +15,21 @@ export default function MainTodo() {
       {
         id: new Date().getMilliseconds(),
         todo: todo,
-        checked: true,
+        checked: false,
       },
     ]);
     setTodo("");
   };
 
   const handleCheck = (id) => {
-    console.log(id);
+    console.log(id + "ip");
+    const updateTodo = store.map((item) => {
+      if (item.id === id) {
+        return { ...item, checked: !item.checked };
+      }
+      return item;
+    });
+    setStore(updateTodo);
   };
 
   const handleDelete = (id) => {
