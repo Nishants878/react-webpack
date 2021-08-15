@@ -3,7 +3,7 @@ import TodoCard from "../TodoCard/TodoCard";
 import classes from "./_TodoList.module.scss";
 export default function TodoList({ store, handleDelete, handleCheck }) {
   return (
-    <div>
+    <div className={classes.ListMain}>
       {store.map((item) => (
         <TodoCard
           key={item.id}
